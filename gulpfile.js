@@ -24,7 +24,8 @@ gulp.task('pug', function(){
         .pipe(gp.pug({
             pretty: true
         }))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build'))
+        .on('end',browserSync.reload);
  })
 
 //stylus task
@@ -40,7 +41,10 @@ gulp.task('stylus', function(){
         }))
         .pipe(gp.csso())
         .pipe(gp.sourcemaps.write())
-        .pipe(gulp.dest('build/static/css'));
+        .pipe(gulp.dest('build/static/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
  
 
