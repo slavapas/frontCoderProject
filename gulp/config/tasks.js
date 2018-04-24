@@ -3,5 +3,6 @@ module.exports=[
     './gulp/tasks/stylus',
     './gulp/tasks/serve',
     './gulp/tasks/watch',
-    './gulp/tasks/script'
+    './gulp/tasks/script',
+    './gulp/tasks/img'
 ]

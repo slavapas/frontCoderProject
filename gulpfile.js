@@ -18,6 +18,6 @@ $.path.tasks.forEach(function(taskPath){
 
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('pug','stylus','scripts:lib','scripts'),    // запускаем паралельно/одновременно
+    $.gulp.parallel('pug','stylus','scripts:lib','scripts','img'),    // запускаем паралельно/одновременно
     $.gulp.parallel('watch','serve')    // запускаем паралельно/одновременно
 ));
